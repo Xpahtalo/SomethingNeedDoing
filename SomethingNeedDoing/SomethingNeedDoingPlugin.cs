@@ -52,7 +52,9 @@ namespace SomethingNeedDoing
             });
         }
 
-        /// <inheritdoc/>
+        /// <summary>
+        /// Gets plugin name.
+        /// </summary>
         public string Name => "Something Need Doing";
 
         /// <inheritdoc/>
