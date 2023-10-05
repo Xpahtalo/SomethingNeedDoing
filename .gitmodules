@@ -1,0 +1,3 @@
+[submodule "lib/ClickLib"]
+	path = lib/ClickLib
+	url = git@github.com:Xpahtalo/ClickLib.git
