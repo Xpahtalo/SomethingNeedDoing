@@ -23,7 +23,7 @@ internal class GameEventManager : IDisposable
     /// </summary>
     public GameEventManager()
     {
-        SignatureHelper.Initialise(this);
+        Service.GameInteropProvider.InitializeFromAttributes(this);
         this.eventFrameworkHook.Enable();
     }
 
@@ -62,7 +62,7 @@ internal class GameEventManager : IDisposable
         }
         catch (Exception ex)
         {
-            PluginLog.Error(ex, "Don't crash the game.");
+            Service.Log.Error(ex, "Don't crash the game.");
         }
 
         return this.eventFrameworkHook.Original(a1, a2, a3, a4, a5, data, dataSize);

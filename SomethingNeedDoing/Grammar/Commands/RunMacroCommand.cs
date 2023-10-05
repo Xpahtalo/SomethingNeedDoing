@@ -3,7 +3,6 @@ using System.Text.RegularExpressions;
 using System.Threading;
 using System.Threading.Tasks;
 
-using Dalamud.Logging;
 using SomethingNeedDoing.Exceptions;
 using SomethingNeedDoing.Grammar.Modifiers;
 using SomethingNeedDoing.Misc;
@@ -50,9 +49,9 @@ internal class RunMacroCommand : MacroCommand
     }
 
     /// <inheritdoc/>
-    public async override Task Execute(ActiveMacro macro, CancellationToken token)
+    public override async Task Execute(ActiveMacro macro, CancellationToken token)
     {
-        PluginLog.Debug($"Executing: {this.Text}");
+        Service.Log.Debug($"Executing: {this.Text}");
 
         var macroNode = Service.Configuration
             .GetAllNodes().OfType<MacroNode>()
