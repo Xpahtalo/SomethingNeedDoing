@@ -107,7 +107,7 @@ namespace SomethingNeedDoing
         /// </summary>
         [PluginService]
         internal static IGameInteropProvider GameInteropProvider { get; private set; } = null!;
-        
+
         /// <summary>
         /// Gets the Dalamud log provider.
         /// </summary>
