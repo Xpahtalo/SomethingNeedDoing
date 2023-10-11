@@ -3,6 +3,7 @@ using System.Threading;
 
 using Dalamud.Hooking;
 using Dalamud.Logging;
+using Dalamud.Plugin;
 using Dalamud.Utility.Signatures;
 using FFXIVClientStructs.FFXIV.Client.Game;
 using SomethingNeedDoing.CraftingData;
@@ -52,7 +53,7 @@ internal class GameEventManager : IDisposable
         {
             if (dataSize >= 4)
             {
-                if (data->ActionType == ActionType.MainCommand || data->ActionType == ActionType.CraftAction)
+                if (data->ActionType == ActionType.MainCommand || data->ActionType == ActionType.CraftAction || data->ActionType == ActionType.Unk_10)
                 {
                     this.CraftingData = *data;
 

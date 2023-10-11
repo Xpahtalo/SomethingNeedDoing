@@ -293,6 +293,10 @@ internal class HelpWindow : Window
         ImGui.PushFont(UiBuilder.MonoFont);
 
         DisplayChangelog(
+            "2023-10-11",
+            "- Fix failure on buff response after 6.5\n");
+
+        DisplayChangelog(
             "2023-05-31",
             "- Added the index modifier\n");
 
