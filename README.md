@@ -16,6 +16,7 @@ It's a better way of storing and running all your different macros.
 Note: Unless otherwise provided by the game or another plugin, these do not work outside the craft interface.
 
 ## In-game usage
+* Add `https://raw.githubusercontent.com/Xpahtalo/plugins/master/pluginmaster.json` to your repo list.
 * Type `/pcraft` to pull up the GUI.
 * Type `/pcraft help` for some help.
 
