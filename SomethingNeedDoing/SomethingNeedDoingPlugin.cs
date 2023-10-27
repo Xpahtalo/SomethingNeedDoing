@@ -44,7 +44,7 @@ namespace SomethingNeedDoing
             this.windowSystem.AddWindow(this.helpWindow);
 
             Service.Interface.UiBuilder.Draw += this.windowSystem.Draw;
-            Service.Interface.UiBuilder.OpenConfigUi += this.OnOpenConfigUi;
+            Service.Interface.UiBuilder.OpenMainUi += this.OnOpenMainUi;
             Service.CommandManager.AddHandler(Command, new CommandInfo(this.OnChatCommand)
             {
                 HelpMessage = "Open a window to edit various settings.",
@@ -61,7 +61,7 @@ namespace SomethingNeedDoing
         public void Dispose()
         {
             Service.CommandManager.RemoveHandler(Command);
-            Service.Interface.UiBuilder.OpenConfigUi -= this.OnOpenConfigUi;
+            Service.Interface.UiBuilder.OpenConfigUi -= this.OnOpenMainUi;
             Service.Interface.UiBuilder.Draw -= this.windowSystem.Draw;
 
             this.windowSystem?.RemoveAllWindows();
@@ -79,7 +79,7 @@ namespace SomethingNeedDoing
             this.helpWindow.IsOpen = true;
         }
 
-        private void OnOpenConfigUi()
+        private void OnOpenMainUi()
         {
             this.macroWindow.Toggle();
         }
